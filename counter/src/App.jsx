@@ -34,20 +34,20 @@ const App = () => {
                   if (prevHours > 0) {
                     return prevHours - 1;
                   } else {
-                    clearInterval(interval); // Stop when time is up
-                    return 0; // Reset hours
+                    clearInterval(interval);
+                    return 0; 
                   }
                 });
-                return 59; // Reset minutes when seconds reach 0
+                return 59;
               }
             });
-            return 59; // Reset seconds when they reach 0
+            return 59; 
           }
         });
       }, 1000);
     }
   
-    return () => clearInterval(interval); // Cleanup interval
+    return () => clearInterval(interval); 
   }, [timeInterval]);
   
   
